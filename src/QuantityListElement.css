@@ -1,0 +1,63 @@
+.quantity-list_element
+{
+  height: 100px;
+  width: 100vw;
+
+  display: inline;
+  float: left;
+
+  border: 0.5px;
+  border-style: solid;
+  border-color: black;
+
+}
+
+
+
+
+/*
+.quantity-list_element img,
+.quantity-list_element p
+*/  
+.quantity-list_element *
+{
+  display: inline;
+  float: left;
+}
+
+.quantity-list_element img
+{
+
+  background-color: none;
+
+
+
+  position: relative;
+  /*
+  transform: translateY(50%);
+  */
+}
+
+.quantity-list_element p
+{
+  color: white;
+  font-size: 40px;
+  font-family: arial;
+
+  background-color: none;
+
+
+  position: relative;
+  transform: translateY(-20%);
+}
+
+/*
+.quantity-list_element:nth-child(even)
+{
+    background: darkgrey;
+}
+.quantity-list_element:nth-child(odd)
+{
+    background: purple;
+}
+*/

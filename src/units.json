@@ -1,0 +1,36 @@
+[
+
+	{
+		"name": "meters",
+		"type": "length",
+		"short-name": "m",
+		"SI-prefixes-allowed": [
+			"kilo",
+			"deci",
+			"centi",
+			"milli"
+		]
+
+	},
+	{
+		"name": "yards",
+		"type": "length",
+		"short-name": "yd???"
+
+	},
+	{
+		"name": "US miles",
+		"type": "length",
+		"short-name": "us-mile"
+
+	},
+	{
+		"name": "test",
+		"type": "test",
+		"short-name": "test"
+
+	}
+
+
+]
+

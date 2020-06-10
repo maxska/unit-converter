@@ -1,0 +1,87 @@
+[
+//======================================================//
+
+
+
+{
+	"kilo":
+	{
+		"short-name": "m",
+		"conversion": 10e3
+	}
+},
+{
+	"hecto":
+	{
+		"short-name": "h",
+		"conversion": 10e2
+	}
+},
+{
+	"":
+	{
+		"short-name": "",
+		"conversion": 10e0
+	}
+},
+{
+	"deci":
+	{
+		"short-name": "m",
+		"conversion": 10e-1
+	}
+},
+{
+	"centi":
+	{
+		"short-name": "c",
+		"conversion": 10e-2
+	}
+},
+{
+	"milli":
+	{
+		"short-name": "m",
+		"conversion": 10e-3
+	}
+},
+
+//======================================================//
+]
+
+
+/*
+{
+	"room": "tp301"  ,
+	"floor": 3 ,
+	"house":  "Täppan",
+	"coord": {
+		"x": 33,	
+		"y": 85
+	},
+	"type": "Grupprum" ,
+    "other": 3 
+},
+{
+	"room": "tp31"  ,
+	"floor": 3 ,
+	"house":  "Täppan",
+	"coord": {
+		"x": 77,
+		"y": 84
+	},
+	"type": "Grupprum" ,
+    "other":  3
+},
+{
+	"room": "tp32"  ,
+	"floor": 3 ,
+	"house":  "Täppan",
+	"coord": {
+		"x": 46,	
+		"y": 84
+	},
+	"type": "Grupprum" ,
+    "other":3  
+}
+*/
