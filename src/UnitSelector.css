@@ -32,6 +32,12 @@
   right: 0;
 
   width: 150px;
+
+  padding: 5px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
 }
 
 
@@ -39,12 +45,14 @@
 .unit-button * 
 {
   display: inline-block;
+
+  margin: 0;
 }
 
 .down-icon
 {
   margin-left: 10px;
-  width: 10px
+  width: 10px;
 }
 
 .dropdown
@@ -72,9 +80,7 @@
 {
   color: black;
   
-  padding-left: 10px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 10px;
 
   /*
   border: 1px;
@@ -99,5 +105,22 @@
   background-color: #b0c7cf;
 }
 
+
+
+
+
+@media screen and (max-width: 400px){
+
+  .unit-button
+  {
+    width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    padding-left: 5px;
+  }
+
+}
 
 
