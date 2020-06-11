@@ -15,6 +15,9 @@ import UnitSelector from "./UnitSelector.js";
 //===========================================================//
 //===========================================================//
 
+import back_icon from "./images/back-icon.png";
+import swap_icon from "./images/swap-icon.png";
+
 
 const Converter = () =>
 {
@@ -60,28 +63,35 @@ const Converter = () =>
     return units_filtered.find(u => u.name === inName);
   }
 
-  //hur ska jag lösa millimeter osv?
-  //kanske genom att ha en "belongsTo" i json? där man på millimeter kan ha belongsTo=meter
-  // men det går inte ty millimeter inte finns i json, utan bara milli.
-  // man kan ha en funktion checkIfSub typ som kollar om name innehåller "milli", "deci", "kilo",
-  // osv, och om den hittar det så kan den kolla vad resten av name innehåller, och då kanske
-  // den hittar "meter", och då vet den att det är milli av just meter.....
-
+  const swap = () =>
+  {
+    alert("swap called");
+  }
 
 
   return(
-    <div>
+    <div id="return-converter">
 
       <div id="header">
-        <Link to="/">BACK TO HOME</Link>
-        <h2>Converting: {type}</h2>
+
+        <Link to="/">
+          <img src={back_icon} id="back-icon"/>
+        </Link>
+
+        <p>Converting: {type}</p>
       </div>
 
-      <UnitSelector units={units_filtered} val={unit1} onChangeValue={changeValue1} />
+      <div className="unit-selector-box">
+        <input type="text" size="5"/>
+        <UnitSelector units={units_filtered} val={unit1} onChangeValue={changeValue1} />
+      </div>
 
-      <p style={{color: "white"}}>Convert to</p>
+      <img src={swap_icon} onClick={swap} id="swap-icon"/>
 
-      <UnitSelector units={units_filtered} val={unit2} onChangeValue={changeValue2} />
+      <div className="unit-selector-box">
+        <input className="test" type="text" size="5"/>
+        <UnitSelector units={units_filtered} val={unit2} onChangeValue={changeValue2} />
+      </div>
 
     </div>
   );

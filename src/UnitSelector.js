@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-r
 //===========================================================//
 //======================    Files    ========================//
 import './UnitSelector.css';
-
+import down_icon from "./images/down-icon.png";
 //===========================================================//
 //===========================================================//
 //=====================    Components    ====================//
@@ -20,12 +20,25 @@ const UnitSelector = props =>
   // https://reactjs.org/docs/hooks-intro.html :
   let [dropdownIsOpen, setDropdown] = useState(false);
 
+
+
+  let [clicked, setClicked] = useState("blue");
+
   const toggleDropdown = () =>
   {
     if(dropdownIsOpen)
+    {
       setDropdown(false);
+      setClicked("blue");
+    }
     else
+    {
       setDropdown(true);
+      setClicked("#8f8f8f");
+    }
+      
+
+    
   }
 
 
@@ -63,12 +76,20 @@ const UnitSelector = props =>
     );
   }
 
+  
+/*
+  const clickStyle = {
+    backgroundColor: {{clicked}}
+  }
+  */ 
+
 
   return(
     <div className="unit-container">
 
-      <div className="unit-selection" onClick={toggleDropdown}>
+      <div className="unit-button" style={{backgroundColor: clicked}} onClick={toggleDropdown}>
         <p>{props.val}</p>
+        <img src={down_icon} className="down-icon"/>
       </div>  
 
       {
