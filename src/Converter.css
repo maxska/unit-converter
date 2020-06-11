@@ -35,6 +35,7 @@ color: #09d3ac;
 body
 {
     background-color: #2b3240;
+    user-select: none;
 }
 
 

@@ -1,0 +1,27 @@
+[
+	{
+		"name" : "kilo",
+		"shortName": "k",
+		"value": 1000
+	},
+	{
+		"name": "hecto",
+		"shortName": "h",
+		"value": 100
+	},
+	{
+		"name" : "deci",
+		"shortName": "d",
+		"value": 0.1
+	},
+	{
+		"name" : "centi",
+		"shortName": "c",
+		"value": 0.01
+	},
+	{
+		"name" : "milli",
+		"shortName": "m",
+		"value": 0.001
+	}
+]

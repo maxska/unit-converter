@@ -20,20 +20,15 @@ const Startpage = () =>
     <div className="startpage">
 
       <div className="startpage-upper">
-
-        <p>unitConverter</p>
-
+        <p>Unit Converter</p>
       </div>
 
       <div className="lower">
-
         <QuantityListElement quantity="length"/>
-
         <QuantityListElement quantity="weight"/>
-
         <QuantityListElement quantity="temperature"/>
-
       </div>
+
     </div>
   );
 }
@@ -61,9 +56,3 @@ function App()
   );
 }
 export default App;
-
-
-
-{/*
-man kan använda map för att visa alla möjliga conversions i Converter
-*/}

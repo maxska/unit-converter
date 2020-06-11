@@ -1,36 +1,93 @@
 [
-
 	{
 		"name": "meters",
 		"type": "length",
-		"short-name": "m",
-		"SI-prefixes-allowed": [
-			"kilo",
-			"deci",
-			"centi",
-			"milli"
-		]
-
+		"shortName": "m",
+		"conversions": 
+		{
+			"yards": 1.0936133,
+			"feet": 3.2808399,
+			"inches": 39.3700787,
+			"miles": 0.000621371192
+		}
 	},
+	{
+		"name": "millimeters",
+		"type": "length",
+		"shortName": "mm",
+		"siPrefix": "milli",
+		"belongsTo": "meters"
+	},
+	{
+		"name": "centimeters",
+		"type": "length",
+		"shortName": "cm",
+		"siPrefix": "centi",
+		"belongsTo": "meters"
+	},
+	{
+		"name": "decimeters",
+		"type": "length",
+		"shortName": "dm",
+		"siPrefix": "deci",
+		"belongsTo": "meters"
+	},
+	{
+		"name": "kilometers",
+		"type": "length",
+		"shortName": "km",
+		"siPrefix": "kilo",
+		"belongsTo": "meters"
+	},
+
+
+
 	{
 		"name": "yards",
 		"type": "length",
-		"short-name": "yd???"
-
+		"shortName": "yd",
+		"conversions": 
+		{
+			"meters": 0.9144,
+			"feet": 3,
+			"inches": 36,
+			"miles": 0.000568181818
+		}
 	},
 	{
-		"name": "US miles",
+		"name": "feet",
 		"type": "length",
-		"short-name": "us-mile"
-
+		"shortName": "ft",
+		"conversions": 
+		{
+			"meters": 0.3048,
+			"yards": 0.333333333,
+			"inches": 12,
+			"miles": 0.000189393939
+		}
 	},
 	{
-		"name": "test",
-		"type": "test",
-		"short-name": "test"
-
+		"name": "inches",
+		"type": "length",
+		"shortName": "in",
+		"conversions": 
+		{
+			"meters": 0.0254,
+			"yards": 0.0277777778,
+			"feet": 0.0833333333,
+			"miles": 0.0000157828283
+		}		
+	},
+	{
+		"name": "miles",
+		"type": "length",
+		"shortName": "mi",
+		"conversions": 
+		{
+			"meters": 1609.344,
+			"yards": 1760,
+			"feet": 5280,
+			"inches": 63360 
+		}	
 	}
-
-
 ]
-
