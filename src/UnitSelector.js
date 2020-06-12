@@ -19,22 +19,22 @@ const UnitSelector = props =>
 {
   // https://reactjs.org/docs/hooks-intro.html :
   let [dropdownIsOpen, setDropdown] = useState(false);
-
-
-
-  let [clickedStyle, setClickedStyle] = useState("blue");
+  let [dynamicBgC, setDynamicBgC] = useState("#3c4552");
+  let [dynamicColor, setDynamicColor] = useState("white");
 
   const toggleDropdown = () =>
   {
     if(dropdownIsOpen)
     {
       setDropdown(false);
-      setClickedStyle("blue");
+      setDynamicBgC("#3c4552");
+      setDynamicColor("white");
     }
     else
     {
       setDropdown(true);
-      setClickedStyle("#8f8f8f");
+      setDynamicBgC("white");
+      setDynamicColor("black");
     }
   }
 
@@ -73,12 +73,17 @@ const UnitSelector = props =>
     );
   }
 
+  const dynamicStyle = 
+  {
+    backgroundColor: dynamicBgC,
+    color: dynamicColor
+  }
 
 
   return(
     <div className="unit-container">
 
-      <div className="unit-button" style={{backgroundColor: clickedStyle}} onClick={toggleDropdown}>
+      <div className="unit-button" style={dynamicStyle} onClick={toggleDropdown}>
         <p>{props.val}</p>
         <img src={down_icon} className="down-icon"/>
       </div>  

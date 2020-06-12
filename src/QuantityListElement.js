@@ -27,7 +27,7 @@ const QuantityListElement = props =>
 
   return(
     <Link to={"/converter/" + quantity}>
-      <div className="quantity-list_element" id="odd">
+      <div className="quantity-list_element">
 
         <img src={require('./images/' + quantity + '-icon.png')} />
 

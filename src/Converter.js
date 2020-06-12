@@ -83,7 +83,7 @@ const Converter = () =>
 
     if(isNaN(fromElement.value) || fromElement.value.length == 0)
     {
-      toElement.value = "";
+      toElement.innerHTML = "";
       return;
     }
 
@@ -127,7 +127,7 @@ const Converter = () =>
       convConst = convConst * fromUnit.conversions[toUnit.name];
     }
 
-    toElement.value = fromElement.value * convConst;
+    toElement.innerHTML = fromElement.value * convConst;
   }
 
 
@@ -142,15 +142,19 @@ const Converter = () =>
         <p>Converting: {type}</p>
       </div>
 
+      <p className="label">From:</p>
       <div className="unit-selector-box">
-        <input id="from-box" type="text" size="5" onChange={convert}/>
+        <input id="from-box" className="ioBox input" type="text" size="5" onChange={convert}/>
         <UnitSelector units={units_filtered} val={unit1} onChangeValue={changeValue1} />
       </div>
-
-      <img src={swap_icon} onClick={swap} id="swap-icon"/>
-
+      
+      <div className="centered">
+        <img src={swap_icon} onClick={swap} id="swap-icon"/>
+      </div>
+      
+      <p className="to-label label">To:</p>
       <div className="unit-selector-box">
-        <input id="to-box" type="text" size="5"/>
+        <p id="to-box" className="ioBox output"></p>
         <UnitSelector units={units_filtered} val={unit2} onChangeValue={changeValue2} />
       </div>
 

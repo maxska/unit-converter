@@ -6,8 +6,11 @@ body
 
 #header
 {
-    background-color: none;
+    background-color: #3c4552;
     padding: 2vw;
+
+    /* border-bottom: 1px solid white; */
+    margin-bottom: 10px;
 }
 
 #header *
@@ -15,7 +18,7 @@ body
     display: inline;
 }
 
-#header p 
+#header p
 {
     font-size: 10vw;
     color: white;
@@ -38,42 +41,108 @@ body
 {
     width: 60px;
 
+    /* fix this
     margin-left: 40%;
+
+    */
+
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-input
+.ioBox
 {
     margin: 0;
     padding: 0;
 
     font-size: 50px;
-    
+
     width: 100%;
 
+    background-color: black;
+    color: white;
 
+    line-height: 55px;
+
+    padding-left: 5px;
+}
+
+.input
+{
+    border: none;
+
+    padding-bottom: 5px;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.output
+{
+    color: white;
+
+    background-color: #3c4552;
+
+    margin-right: 2px;
+
+    font-size: 50px;
+
+    /* height: 61.5px; */
+
+    /* line-height: 55px;
+
+    line-height: normal; */
+
+    
+
+    padding-top: 0;
+}
+.output p
+{
+    padding: 0;
+    margin: 0;
 }
 
 .unit-selector-box
 {
-    background-color: red;
-
     padding: 0;
     margin: 0;
 
     display: flex;
-        
+}
 
+.centered
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-@media screen and (max-width: 500px){
 
-    #header
-    {
-        background-color: grey;
-    }
 
-    input 
+.label
+{
+    font-size: 16px;
+    color: white;
+
+    padding: 0;
+    margin: 0;
+
+    margin-left: 5px;
+}
+
+.to-label
+{
+    margin-top: -20px;
+}
+
+
+@media screen and (max-width: 500px)
+{
+
+    .ioBox
     {
         font-size: 40px;
     }
@@ -81,12 +150,8 @@ input
 
 
 
-@media screen and (max-width: 400px){
-
-    #header
-    {
-        background-color: lightgrey;
-    }
+@media screen and (max-width: 400px)
+{
 
     .unit-selector-box
     {
@@ -98,12 +163,35 @@ input
         display: inline;
     }
 
-    input 
+    .ioBox
     {
         font-size: 30px;
+        
+        height: 45px;
 
-        height: 40px
+        line-height: normal;
     }
+
+    #swap-icon
+    {
+        width: 40px;
+    }
+
+
+    .input *
+    {   
+        padding-bottom: 5px;
+    }
+
+    .output
+    {
+        padding-top: 3px;
+        padding-bottom: 2px;
+
+        margin-bottom: 2px;
+    }
+
+
 
 }
 

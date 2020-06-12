@@ -6,7 +6,7 @@
   width: 100%;
   */
   
-  background-color: orange;
+  background-color: red;
   color: white;
 
   display: inline;
@@ -15,8 +15,6 @@
 
 .unit-button
 {
-  background-color: grey;
-
   padding-left: 10px; 
 
   width: 100%;
@@ -47,6 +45,8 @@
   display: inline-block;
 
   margin: 0;
+  font-size: 16px;
+  padding: 0;
 }
 
 .down-icon
@@ -57,30 +57,32 @@
 
 .dropdown
 {
-  background-color: pink;
-
   display: block;
 
   position: fixed;
   /*or
   position: absolute*/
   left: 0;
+  right: 0;
   
   width: 100%;
 
   z-index: 2;
 
 
-  padding: 2px;  
-  background-color: #8f8f8f;
+  padding: 1px;  
+
+  background-color: white;
 }
 
 
 .dropdown-link
 {
-  color: black;
+  color: white;
   
   padding: 10px;
+
+  margin-right: 2px; /*fix this.....*/
 
   /*
   border: 1px;
@@ -88,6 +90,7 @@
   border-color: white;
   */
 }
+
 
 .dropdown-link p
 {
@@ -97,14 +100,20 @@
 
 .dropdown-link:nth-child(odd)
 {
-  background-color: #a8b6ba;
+  background-color: #3c4552;
 }
 
 .dropdown-link:nth-child(even)
 {
-  background-color: #b0c7cf;
+  background-color: #242b36;
 }
 
+
+.dropdown-link:hover
+{
+  background-color: white;
+  color: black
+}
 
 
 
@@ -115,10 +124,17 @@
   {
     width: 100%;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
 
+    height: 50px; 
+
+    padding: 0;
     padding-left: 5px;
+
+  }
+
+  .unit-button *
+  {
+    padding-top: 14px;
   }
 
 }

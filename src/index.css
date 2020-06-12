@@ -12,16 +12,3 @@ code {
     monospace;
 }
 
-
-
-/* --------  vrf funkar inte detta längre? alla children blir odd, tror alla blir "1" --------*/
-
-.left:nth-child(even)
-{
-    background-color: darkgrey;
-}
-.left:nth-child(odd)
-{
-    background-color: darkbrown;
-}
-

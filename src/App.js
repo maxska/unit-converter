@@ -19,7 +19,7 @@ const Startpage = () =>
   return(
     <div className="startpage">
 
-      <div className="startpage-upper">
+      <div className="upper">
         <p>Unit Converter</p>
       </div>
 

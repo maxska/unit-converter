@@ -41,29 +41,30 @@ body
 /*===============================================================*/
 /*===============================================================*/
 
-.startpage-upper
+.upper
 {
   text-align: center;
-  background-color: black;
-  height:20%;  
+  height: 10%;  
 
   color: white;
-  font-family: courier;
-  font-size: 5vw;
+  font-family: "Brush Script MT";
+  font-size: 10vw;
 
-  padding-top:5%;
 }
 
-.startpage-upper p
+.upper p
 {
-  width:100%;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+ 
 }
 
 /*===============================================================*/
 /*===============================================================*/
 /*===============================================================*/
 
-#odd
-{
-  background-color: #5b606e;
-}
