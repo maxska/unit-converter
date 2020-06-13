@@ -67,11 +67,12 @@ const UnitSelector = props =>
     return(
       <div className="dropdown">
       {
-        props1.units.map(u => (<DropdownLink name={u.name}/>) )
+        props1.units.map(u => (<DropdownLink name={u.name}/>))
       }
       </div>
     );
   }
+
 
   const dynamicStyle = 
   {
@@ -95,11 +96,7 @@ const UnitSelector = props =>
         <Dropdown units={props.units} />
       }
 
-
       {
-        /*
-        <p>Updated immediately: props.val = {props.val}</p>
-        */
         console.log("Updated immediately in UnitSelector.js: " + props.val)
       }
 

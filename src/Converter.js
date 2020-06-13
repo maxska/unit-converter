@@ -139,7 +139,7 @@ const Converter = () =>
           <img src={back_icon} id="back-icon"/>
         </Link>
 
-        <p>Converting: {type}</p>
+        <p><span>Unit Converter:</span> {type}</p>
       </div>
 
       <p className="label">From:</p>

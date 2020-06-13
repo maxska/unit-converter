@@ -20,14 +20,14 @@ const QuantityListElement = props =>
 {
   let quantity = props.quantity;
 
-  function makeTitle(s)
+  const makeTitle = s =>
   {
     return s[0].toUpperCase() + s.substring(1, s.length);
   }
 
   return(
     <Link to={"/converter/" + quantity}>
-      <div className="quantity-list_element">
+      <div className="quantity-list-element">
 
         <img src={require('./images/' + quantity + '-icon.png')} />
 

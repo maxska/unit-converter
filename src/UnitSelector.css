@@ -38,8 +38,6 @@
 
 }
 
-
-
 .unit-button * 
 {
   display: inline-block;
@@ -75,7 +73,6 @@
   background-color: white;
 }
 
-
 .dropdown-link
 {
   color: white;
@@ -90,7 +87,6 @@
   border-color: white;
   */
 }
-
 
 .dropdown-link p
 {
@@ -108,18 +104,14 @@
   background-color: #242b36;
 }
 
-
 .dropdown-link:hover
 {
   background-color: white;
   color: black
 }
 
-
-
-
-@media screen and (max-width: 400px){
-
+@media screen and (max-width: 400px)
+{
   .unit-button
   {
     width: 100%;
@@ -136,7 +128,6 @@
   {
     padding-top: 14px;
   }
-
 }
 
 

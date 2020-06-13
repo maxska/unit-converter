@@ -33,7 +33,7 @@ const Startpage = () =>
   );
 }
 
-function App()
+const App = () =>
 {
   return(
 
