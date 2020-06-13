@@ -47,9 +47,15 @@
   padding: 0;
 }
 
+.unit-button p
+{
+  margin-left: 5px;
+}
+
 .down-icon
 {
   margin-left: 10px;
+  margin-bottom: 1px;
   width: 10px;
 }
 
@@ -127,6 +133,11 @@
   .unit-button *
   {
     padding-top: 14px;
+  }
+
+  .unit-button p
+  {
+    margin-left: 0px;
   }
 }
 

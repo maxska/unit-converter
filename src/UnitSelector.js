@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-r
 //===========================================================//
 //======================    Files    ========================//
 import './UnitSelector.css';
-import down_icon from "./images/down-icon.png";
 //===========================================================//
 //===========================================================//
 //=====================    Components    ====================//
@@ -21,6 +20,7 @@ const UnitSelector = props =>
   let [dropdownIsOpen, setDropdown] = useState(false);
   let [dynamicBgC, setDynamicBgC] = useState("#3c4552");
   let [dynamicColor, setDynamicColor] = useState("white");
+  let [icon, setIcon] = useState("down");
 
   const toggleDropdown = () =>
   {
@@ -29,12 +29,14 @@ const UnitSelector = props =>
       setDropdown(false);
       setDynamicBgC("#3c4552");
       setDynamicColor("white");
+      setIcon("down");
     }
     else
     {
       setDropdown(true);
       setDynamicBgC("white");
       setDynamicColor("black");
+      setIcon("up");
     }
   }
 
@@ -79,14 +81,14 @@ const UnitSelector = props =>
     backgroundColor: dynamicBgC,
     color: dynamicColor
   }
-
+  
 
   return(
     <div className="unit-container">
 
       <div className="unit-button" style={dynamicStyle} onClick={toggleDropdown}>
         <p>{props.val}</p>
-        <img src={down_icon} className="down-icon"/>
+        <img src={require("./images/" + icon + "-icon.png")} className="down-icon"/>
       </div>  
 
       {

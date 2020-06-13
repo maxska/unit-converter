@@ -39,28 +39,18 @@ const Converter = () =>
   //===========================================================//
 
 
-  let [unit1, setUnit1] = useState( units_filtered[0].name ); 
-  let [unit2, setUnit2] = useState( units_filtered[1].name );
+  let [unit1, setUnit1] = useState(units_filtered[0].name); 
+  let [unit2, setUnit2] = useState(units_filtered[1].name);
 
-
-  const changeValue1 = e =>
+  const changeUnit = (number, e) =>
   {
-    //console.log("------------------");
-    console.log("e = " + e);
-    setUnit1(e);
-    //console.log("unit1 = " + unit1);
-    
-    //unit_1 = e;
-  }
+    //alert("number = "+ number);
+    //alert("e = " + e);
 
-  const changeValue2 = e =>
-  {
-    //console.log("------------------");
-    console.log("e = " + e);
-    setUnit2(e);
-    //console.log("unit2 = " + unit2);
-
-    //unit_2 = e;
+    if(number === 1)
+      setUnit1(e);
+    else
+      setUnit2(e);
   }
 
   let getUnitByName = inName =>
@@ -70,7 +60,17 @@ const Converter = () =>
 
   const swap = () =>
   {
-    alert("swap called");
+    let fromElement = document.getElementById("from-box");
+    let toElement = document.getElementById("to-box");
+    let temp;
+
+    temp = fromElement.value;
+    fromElement.value = toElement.innerHTML;
+    toElement.innerHTML = temp;
+
+    temp = unit1;
+    setUnit1(unit2);
+    setUnit2(temp);
   }
 
   const convert = () =>
@@ -145,7 +145,7 @@ const Converter = () =>
       <p className="label">From:</p>
       <div className="unit-selector-box">
         <input id="from-box" className="ioBox input" type="text" size="5" onChange={convert}/>
-        <UnitSelector units={units_filtered} val={unit1} onChangeValue={changeValue1} />
+        <UnitSelector units={units_filtered} val={unit1} onChangeValue={e => changeUnit(1, e)} />
       </div>
       
       <div className="centered">
@@ -155,7 +155,7 @@ const Converter = () =>
       <p className="to-label label">To:</p>
       <div className="unit-selector-box">
         <p id="to-box" className="ioBox output"></p>
-        <UnitSelector units={units_filtered} val={unit2} onChangeValue={changeValue2} />
+        <UnitSelector units={units_filtered} val={unit2} onChangeValue={e => changeUnit(2, e)} />
       </div>
 
     </div>
