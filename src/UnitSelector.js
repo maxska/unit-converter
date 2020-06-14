@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-router-dom";
-
-//===========================================================//
-//===========================================================//
 //======================    Files    ========================//
 import './UnitSelector.css';
-//===========================================================//
-//===========================================================//
-//=====================    Components    ====================//
-
-//===========================================================//
-//===========================================================//
 //===========================================================//
 
 
@@ -22,6 +12,8 @@ const UnitSelector = props =>
   let [dynamicColor, setDynamicColor] = useState("white");
   let [icon, setIcon] = useState("down");
 
+  // Function for toggling the dropdown unit list. Changes states depending on 
+  //  whether the dropdown is open, including style for the button:
   const toggleDropdown = () =>
   {
     if(dropdownIsOpen)
@@ -40,42 +32,59 @@ const UnitSelector = props =>
     }
   }
 
+  // Returns the object in the array of filtered units (from the JSON file)
+  //  that has the same name as inName:
+  let getShortName = name =>
+  {
+    return props.units.find(u => u.name === name).shortName;
+  }
 
+
+  // Handles what happens when an item in the dropdown unit list is clicked:
   const clickLink = input =>
   {
-    //updates in Converter.js:
+    //updates in Converter.js, calles a function through the attribute of
+    // "onChangeValue" in Converter.js:
     props.onChangeValue(input);
 
+    //close the dropdown menu:
     toggleDropdown();
   }
 
 
+  // Renders the dropdown unit list, using map, with each element being of 
+  //  the component DropdownLink. units, from props1, comes from props, 
+  //  which comes from Converter.js, contains all units for the current quantity,
+  //  and using map, each unit's name (u.name) is sent into DropdownLink as a prop, 
+  //  and all DropdownLink elements are placed in the div with classname "dropdown", 
+  //  because DropdownLink returns a component and map concatenates all those components.
+  const Dropdown = () =>
+  {
+    return(
+      <div className="dropdown">
+      {
+        props.units.map(u => (<DropdownLink name={u.name}/>))
+      }
+      </div>
+    );
+  }
+
+  
+  // Renders an item/link in the dropdown unit list.
   const DropdownLink = props2 => 
   {
-  /*lösningen är att ha () => här, då kan man skicka in argument 
-  i önskad funktion utan att funktionen kallas på från parent... */
     return(
       <div className="dropdown-link" onClick={() => clickLink(props2.name)}> 
         <p>
-          {props2.name}
+          {props2.name} ({getShortName(props2.name)})
         </p> 
       </div>
     );
   }
 
 
-  const Dropdown = props1 =>
-  {
-    return(
-      <div className="dropdown">
-      {
-        props1.units.map(u => (<DropdownLink name={u.name}/>))
-      }
-      </div>
-    );
-  }
-
-
+  // An object for dynamic style, used by a div element in return below. The
+  //  style (dynamicBgC and dynamicColor) is set through states above.
   const dynamicStyle = 
   {
     backgroundColor: dynamicBgC,
@@ -87,7 +96,7 @@ const UnitSelector = props =>
     <div className="unit-container">
 
       <div className="unit-button" style={dynamicStyle} onClick={toggleDropdown}>
-        <p>{props.val}</p>
+      <p>{props.selectedUnit} ({getShortName(props.selectedUnit)})</p>
         <img src={require("./images/" + icon + "-icon.png")} className="down-icon"/>
       </div>  
 
@@ -95,11 +104,7 @@ const UnitSelector = props =>
         //if dropdownIsOpen == true, the component below will be shown
         dropdownIsOpen
         &&
-        <Dropdown units={props.units} />
-      }
-
-      {
-        console.log("Updated immediately in UnitSelector.js: " + props.val)
+        <Dropdown/>
       }
 
     </div>

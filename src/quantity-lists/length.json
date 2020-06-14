@@ -1,7 +1,6 @@
 [
 	{
 		"name": "meters",
-		"type": "length",
 		"shortName": "m",
 		"conversions": 
 		{
@@ -13,38 +12,30 @@
 	},
 	{
 		"name": "millimeters",
-		"type": "length",
 		"shortName": "mm",
 		"siPrefix": "milli",
 		"belongsTo": "meters"
 	},
 	{
 		"name": "centimeters",
-		"type": "length",
 		"shortName": "cm",
 		"siPrefix": "centi",
 		"belongsTo": "meters"
 	},
 	{
 		"name": "decimeters",
-		"type": "length",
 		"shortName": "dm",
 		"siPrefix": "deci",
 		"belongsTo": "meters"
 	},
 	{
 		"name": "kilometers",
-		"type": "length",
 		"shortName": "km",
 		"siPrefix": "kilo",
 		"belongsTo": "meters"
 	},
-
-
-
 	{
 		"name": "yards",
-		"type": "length",
 		"shortName": "yd",
 		"conversions": 
 		{
@@ -56,7 +47,6 @@
 	},
 	{
 		"name": "feet",
-		"type": "length",
 		"shortName": "ft",
 		"conversions": 
 		{
@@ -68,7 +58,6 @@
 	},
 	{
 		"name": "inches",
-		"type": "length",
 		"shortName": "in",
 		"conversions": 
 		{
@@ -80,7 +69,6 @@
 	},
 	{
 		"name": "miles",
-		"type": "length",
 		"shortName": "mi",
 		"conversions": 
 		{

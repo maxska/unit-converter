@@ -1,25 +1,16 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-router-dom";
-
-//===========================================================//
-//===========================================================//
+import React from 'react';
+import { Link } from "react-router-dom";
 //======================    Files    ========================//
 import './QuantityListElement.css'; 
-
 //===========================================================//
-//===========================================================//
-//=====================    Components    ====================//
-
-//===========================================================//
-//===========================================================//
-//===========================================================//
-
 
 
 const QuantityListElement = props =>
 {
-  let quantity = props.quantity;
+  //props.quantity is set in App.js, e.g. "length":
+  let quantity = props.quantity; 
 
+  // Makes the first character of the string s uppercase:
   const makeTitle = s =>
   {
     return s[0].toUpperCase() + s.substring(1, s.length);
@@ -29,7 +20,7 @@ const QuantityListElement = props =>
     <Link to={"/converter/" + quantity}>
       <div className="quantity-list-element">
 
-        <img src={require('./images/' + quantity + '-icon.png')} />
+        <img src={require("./images/" + quantity + "-icon.png")} />
 
         <p>{makeTitle(quantity)}</p>
 
