@@ -25,21 +25,9 @@ const Converter = () =>
   //  through setUnit1.
   let [unit1, setUnit1] = useState(units[0].name); 
   let [unit2, setUnit2] = useState(units[1].name);
-
+  
 
   // Changes the unit (which one is decided by number), to e, which comes from
-  //  the onChangeValue attribute for the UnitSelector component, which in turn 
-  //  is called from within that component's file. The reason that I use both
-  //  "unit1 = e" and "setUnit1(e)" as I do i.e. in the swap function, 
-  //  is because unlike in there, where the components need to be rerendered 
-  //  (using state), this function is called when the user changes the unit, 
-  //  so the component is showing the correct unit without need to be rerendered, 
-  //  and besides, if I use setUnit1(e), it doesn't update it instantly, which
-  //  is a necessity for when the convert function is called below. 
-
-
-
-   // Changes the unit (which one is decided by number), to e, which comes from
   //  the onChangeValue attribute for the UnitSelector component, which in turn 
   //  is called from within that component's file. The reason that I use both
   //  "unit1 = e" and "setUnit1(e)" is because (for the text that is sent by
