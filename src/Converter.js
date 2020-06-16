@@ -26,7 +26,7 @@ const Converter = () =>
   let [unit1, setUnit1] = useState(units[0].name); 
   let [unit2, setUnit2] = useState(units[1].name);
 
-   // Changes the unit (which one is decided by number), to e, which comes from
+  // Changes the unit (which one is decided by number), to e, which comes from
   //  the onChangeValue attribute for the UnitSelector component, which in turn 
   //  is called from within that component's file. The reason that I use both
   //  "unit1 = e" and "setUnit1(e)" is because (for the text that is sent by
