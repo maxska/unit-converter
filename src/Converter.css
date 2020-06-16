@@ -8,7 +8,10 @@ body
 {
     background-color: #3c4552;
     padding: 2vw;
+    padding-left: 1vw;
     margin-bottom: 10px;
+
+    white-space: nowrap;
 }
 
 #header *
@@ -18,9 +21,9 @@ body
 
 #header p
 {
-    font-size: 10vw;
+    font-size: 8vw;
     color: white;
-    margin-left: 2vw;
+    margin-left: 1vw;
 }
 
 #header span

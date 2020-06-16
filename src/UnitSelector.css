@@ -10,32 +10,22 @@
   color: white;
 
   display: inline;
-
 }
 
 .unit-button
 {
   padding-left: 10px; 
-
   width: 100%;
-
   display: block;
-
-  /*
-  height: 100%;
-  */
-
   position: relative;
-
   right: 0;
-
-  width: 150px;
-
   padding: 5px;
-
   padding-top: 20px;
   padding-bottom: 20px;
 
+  /* allows text and img to stay on one line: */
+  min-width: 150px;
+  white-space: nowrap;
 }
 
 .unit-button * 
@@ -44,12 +34,22 @@
 
   margin: 0;
   font-size: 16px;
-  padding: 0;
+  padding: 0; 
 }
 
 .unit-button p
 {
   margin-left: 5px;
+}
+
+.sup
+{
+  /* 
+    https://stackoverflow.com/questions/1530685/html-sup-tag-affecting-line-height-how-to-make-it-consistent
+  */
+
+  vertical-align: top;
+  font-size: 12px;
 }
 
 .down-icon
@@ -102,7 +102,7 @@
 
 .dropdown-link:nth-child(odd)
 {
-  background-color: #3c4552;
+  background-color: #2f3744;
 }
 
 .dropdown-link:nth-child(even)

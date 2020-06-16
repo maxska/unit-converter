@@ -1,0 +1,46 @@
+[
+	{
+		"name": "celcius",
+		"shortName": "C",
+		"conversions": 
+		{
+			"farenheit": 
+			{
+				"constant": 1.8,
+				"startValue": 32
+			},
+			"kelvin": 273.15
+		}
+	},
+	{	
+		"name": "farenheit",
+		"shortName": "F",
+		"conversions": 
+		{
+			"celcius": 
+			{
+				"constant": 0.555555555555556,
+				"startValue": -17.777777778
+			},
+			"kelvin": 
+			{
+				"constant": 0.555555555555556,
+				"startValue": 255.3722222
+			}
+		}
+	},
+	{
+		"name": "kelvin",
+		"shortName": "K",
+		"conversions": 
+		{
+			"celcius": -273.15,
+			"farenheit": 
+			{
+				"constant": 1.8,
+				"startValue": -459.67
+			}
+		}
+	}
+
+]

@@ -36,7 +36,18 @@ const UnitSelector = props =>
   //  that has the same name as inName:
   let getShortName = name =>
   {
-    return props.units.find(u => u.name === name).shortName;
+    let shortName = props.units.find(u => u.name === name).shortName;
+
+    if(shortName.includes("^"))
+    {
+
+      let split = shortName.split("^");
+      return <span>{split[0]}<span className="sup">{split[1]}</span></span>;
+    }
+    else
+    {
+      return shortName;
+    }
   }
 
 
@@ -63,7 +74,7 @@ const UnitSelector = props =>
     return(
       <div className="dropdown">
       {
-        props.units.map(u => (<DropdownLink name={u.name}/>))
+        props.units.map(u => (<DropdownLink name={u.name} key={u.name}/>))
       }
       </div>
     );
@@ -96,8 +107,8 @@ const UnitSelector = props =>
     <div className="unit-container">
 
       <div className="unit-button" style={dynamicStyle} onClick={toggleDropdown}>
-      <p>{props.selectedUnit} ({getShortName(props.selectedUnit)})</p>
-        <img src={require("./images/" + icon + "-icon.png")} className="down-icon"/>
+        <p>{props.selectedUnit} ({getShortName(props.selectedUnit)})</p>
+        <img src={require("./images/" + icon + "-icon.png")} className="down-icon" alt="expand"/>
       </div>  
 
       {

@@ -24,6 +24,8 @@ const Startpage = () =>
         <QuantityListElement quantity="length"/>
         <QuantityListElement quantity="weight"/>
         <QuantityListElement quantity="temperature"/>
+        <QuantityListElement quantity="area"/>
+        <QuantityListElement quantity="volume"/>
       </div>
 
     </div>

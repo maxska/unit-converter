@@ -12,6 +12,11 @@
   background-color: #3c4552;
 }
 
+.quantity-list-element:hover
+{
+  background-color: #556171;
+}
+
 .quantity-list-element *
 {
   display: inline;
@@ -22,6 +27,7 @@
 {
   margin-left: 5px;
   position: relative;
+  width: 100px;
 }
 
 .quantity-list-element p

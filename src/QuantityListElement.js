@@ -18,9 +18,9 @@ const QuantityListElement = props =>
 
   return(
     <Link to={"/converter/" + quantity}>
-      <div className="quantity-list-element">
+      <div className="quantity-list-element" key={quantity}>
 
-        <img src={require("./images/" + quantity + "-icon.png")} />
+        <img src={require("./images/" + quantity + "-icon.png")} alt={quantity + " icon"}/>
 
         <p>{makeTitle(quantity)}</p>
 

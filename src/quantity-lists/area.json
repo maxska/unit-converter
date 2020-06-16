@@ -1,0 +1,84 @@
+[
+	{
+		"name": "sq. meters",
+		"shortName": "m^2",
+		"conversions": 
+		{
+			"hectares": 0.0001,
+			"acres": 0.000247105381,
+			"sq. feet": 10.7639104,
+			"sq. inches": 1550.0031
+		}
+	},
+	{
+		"name": "sq. millimeters",
+		"shortName": "mm^2",
+		"siPrefix": "milli",
+		"belongsTo": "sq. meters"
+	},
+	{
+		"name": "sq. centimeters",
+		"shortName": "cm^2",
+		"siPrefix": "centi",
+		"belongsTo": "sq. meters"
+	},
+	{
+		"name": "sq. decimeters",
+		"shortName": "dm^2",
+		"siPrefix": "deci",
+		"belongsTo": "sq. meters"
+	},
+	{
+		"name": "sq. kilometers",
+		"shortName": "km^2",
+		"siPrefix": "kilo",
+		"belongsTo": "sq. meters"
+	},
+
+
+
+	{
+		"name": "hectares",
+		"shortName": "ha",
+		"conversions": 
+		{
+			"sq. meters": 10000,
+			"acres": 2.47105381,
+			"sq. feet": 107639.104,
+			"sq. inches": 15500031
+		}
+	},
+	{
+		"name": "acres",
+		"shortName": "ac",
+		"conversions": 
+		{
+			"sq. meters": 4046.85642,
+			"hectares": 0.404685642,
+			"sq. feet": 43560,
+			"sq. inches": 6272640
+		}
+	},
+	{
+		"name": "sq. feet",
+		"shortName": "ft^2",
+		"conversions": 
+		{
+			"sq. meters": 0.09290304,
+			"hectares": 0.000009290304,
+			"acres": 0.0000229568411,
+			"sq. inches": 144
+		}
+	},
+	{
+		"name": "sq. inches",
+		"shortName": "in^2",
+		"conversions": 
+		{
+			"sq. meters": 0.00064516,
+			"hectares": 0.000000064516,
+			"acres": 0.000000159422508,
+			"sq. feet": 0.00694444444
+		}
+	}
+]

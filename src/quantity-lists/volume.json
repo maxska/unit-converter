@@ -1,0 +1,95 @@
+[
+	{
+		"name": "cubic meters",
+		"shortName": "m^3",
+		"conversions": 
+		{
+			"liters": 1000,
+			"cubic feet": 35.3146667,
+			"cubic inches": 61023.7441,
+			"US gallons": 264.172052,
+			"UK gallons": 219.969157
+		}
+	},
+	{
+		"name": "liters",
+		"shortName": "l",
+		"conversions": 
+		{
+			"cubic meters": 0.001,
+			"cubic feet": 0.0353146667,
+			"cubic inches": 61.0237441,
+			"US gallons": 0.264172052,
+			"UK gallons": 0.219969157
+		}
+	},
+	{
+		"name": "deciliters",
+		"shortName": "dl",
+		"siPrefix": "deci",
+		"belongsTo": "liters"
+	},
+	{
+		"name": "milliliters",
+		"shortName": "ml",
+		"siPrefix": "milli",
+		"belongsTo": "liters"
+	},
+	{
+		"name": "centiliters",
+		"shortName": "cl",
+		"siPrefix": "centi",
+		"belongsTo": "liters"
+	},
+
+
+
+	{
+		"name": "cubic feet",
+		"shortName": "ft^3",
+		"conversions": 
+		{
+			"cubic meters": 0.0283168466 ,
+			"liters": 28.3168466,
+			"cubic inches": 1728,
+			"US gallons": 7.48051948,
+			"UK gallons": 6.22883288
+		}
+	},
+	{
+		"name": "cubic inches",
+		"shortName": "in^3",
+		"conversions": 
+		{
+			"cubic meters": 0.000016387064,
+			"liters": 0.016387064,
+			"cubic feet": 0.000578703704,
+			"US gallons": 0.00432900433,
+			"UK gallons": 0.00360464866
+		}
+	},
+	{
+		"name": "US gallons",
+		"shortName": "US gal",
+		"conversions": 
+		{
+			"cubic meters": 0.00378541178,
+			"liters": 3.78541178,
+			"cubic feet": 0.133680556,
+			"cubic inches": 231,
+			"UK gallons": 0.83267384
+		}
+	},
+	{
+		"name": "UK gallons",
+		"shortName": "UK gal",
+		"conversions": 
+		{
+			"cubic meters": 0.00454609188,
+			"liters": 4.54609188,
+			"cubic feet": 0.16054372,
+			"cubic inches": 277.419547,
+			"US gallons": 1.20095042
+		}
+	}
+]
