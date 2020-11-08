@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, HashRouter} from "react-router-dom";
 //======================    Files    ========================//
 import './App.css';
 //=====================    Components    ====================//
@@ -45,7 +45,7 @@ const Startpage = () =>
 const App = () =>
 {
   return(
-    <Router>
+    <HashRouter basename="/">
         <Switch>
 
           <Route exact path="/">
@@ -55,7 +55,7 @@ const App = () =>
           <Route path="/converter/:type" component={Converter} />
 
         </Switch>
-    </Router>
+    </HashRouter>
   );
 }
 export default App;
