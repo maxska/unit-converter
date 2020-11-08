@@ -7,23 +7,39 @@ body
 #header
 {
     background-color: #3c4552;
-    padding: 2vw;
+    /*padding: 2vw;*/
     padding-left: 1vw;
     margin-bottom: 10px;
 
     white-space: nowrap;
+
+    max-height: 100px;
 }
 
 #header *
 {
-    display: inline;
+    display: inline-block;
+    position: relative
 }
 
 #header p
 {
-    font-size: 8vw;
+    font-size: 50px;
     color: white;
+
+    margin: 0;
+    padding: 0;
+
     margin-left: 1vw;
+
+
+
+    
+    position: absolute;
+
+    margin-bottom: 10px;
+
+    
 }
 
 #header span
@@ -33,11 +49,17 @@ body
 
 #back-icon
 {
-    top: 1vw;
     position: relative;
-    width: 6vw;
+    width: 40px;
     margin-left: 2vw;
     margin-right: 2vw;
+
+    
+    margin-top: 10px;
+
+    margin-bottom: 5px;
+
+    
 }
 
 #swap-icon
@@ -121,6 +143,20 @@ body
     .ioBox
     {
         font-size: 40px;
+    }
+
+    #header p
+    {
+        font-size: 8vw;
+    }
+
+    #back-icon
+    {
+        width: 6vw;
+        
+        margin-top: 1.5vw;
+        
+        margin-bottom: 0.5vw;
     }
 }
 

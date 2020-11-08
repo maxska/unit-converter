@@ -105,7 +105,7 @@ const UnitSelector = props =>
 
   return(
     <div className="unit-container">
-
+      
       <div className="unit-button" style={dynamicStyle} onClick={toggleDropdown}>
         <p>{props.selectedUnit} ({getShortName(props.selectedUnit)})</p>
         <img src={require("./images/" + icon + "-icon.png")} className="down-icon" alt="expand"/>

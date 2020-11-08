@@ -63,9 +63,15 @@
 {
   display: block;
 
-  position: fixed;
+  /*position: fixed;*/
+  position: absolute;
+
+  
   /*or
   position: absolute*/
+  
+  width: 100vw;
+
   left: 0;
   right: 0;
   
