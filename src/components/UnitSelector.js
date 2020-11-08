@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 //======================    Files    ========================//
-import './UnitSelector.css';
+import './style/UnitSelector.css';
 //===========================================================//
 
 
@@ -63,12 +63,23 @@ const UnitSelector = props =>
   }
 
 
+  // An object for dynamic style, used by a div element in return below. The
+  //  style (dynamicBgC and dynamicColor) is set through states above.
+  const dynamicStyle = 
+  {
+    backgroundColor: dynamicBgC,
+    color: dynamicColor
+  }
+  
+
+
   // Renders the dropdown unit list, using map, with each element being of 
-  //  the component DropdownLink. units, from props1, comes from props, 
-  //  which comes from Converter.js, contains all units for the current quantity,
-  //  and using map, each unit's name (u.name) is sent into DropdownLink as a prop, 
-  //  and all DropdownLink elements are placed in the div with classname "dropdown", 
-  //  because DropdownLink returns a component and map concatenates all those components.
+  // the component DropdownLink. units, from props1, comes from props, 
+  // which comes from Converter.js, contains all units for the current 
+  // quantity, and using map, each unit's name (u.name) is sent into 
+  // DropdownLink as a prop, and all DropdownLink elements are placed in the 
+  // div with classname "dropdown", because DropdownLink returns a component 
+  // and map concatenates all those components.
   const Dropdown = () =>
   {
     return(
@@ -93,22 +104,12 @@ const UnitSelector = props =>
     );
   }
 
-
-  // An object for dynamic style, used by a div element in return below. The
-  //  style (dynamicBgC and dynamicColor) is set through states above.
-  const dynamicStyle = 
-  {
-    backgroundColor: dynamicBgC,
-    color: dynamicColor
-  }
-  
-
   return(
     <div className="unit-container">
       
       <div className="unit-button" style={dynamicStyle} onClick={toggleDropdown}>
         <p>{props.selectedUnit} ({getShortName(props.selectedUnit)})</p>
-        <img src={require("./images/" + icon + "-icon.png")} className="down-icon" alt="expand"/>
+        <img src={require("../images/" + icon + "-icon.png")} className="down-icon" alt="expand"/>
       </div>  
 
       {

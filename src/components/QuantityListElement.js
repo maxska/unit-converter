@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 //======================    Files    ========================//
-import './QuantityListElement.css'; 
+import './style/QuantityListElement.css'; 
 //===========================================================//
 
 
@@ -20,7 +20,7 @@ const QuantityListElement = props =>
     <Link to={"/converter/" + quantity}>
       <div className="quantity-list-element" key={quantity}>
 
-        <img src={require("./images/" + quantity + "-icon.png")} alt={quantity + " icon"}/>
+        <img src={require("../images/" + quantity + "-icon.png")} alt={quantity + " icon"}/>
 
         <p>{makeTitle(quantity)}</p>
 

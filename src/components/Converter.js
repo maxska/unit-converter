@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 //======================    Files    ========================//
-import './Converter.css';
-import si_prefixes from "./quantity-lists/units-si-prefixes.json";
-import back_icon from "./images/back-icon.png";
-import swap_icon from "./images/swap-icon.png";
+import './style/Converter.css';
+import si_prefixes from "../quantity-lists/units-si-prefixes.json";
+import back_icon from "../images/back-icon.png";
+import swap_icon from "../images/swap-icon.png";
 //=====================    Components    ====================//
 import UnitSelector from "./UnitSelector.js";
 //===========================================================//
@@ -16,7 +16,7 @@ const Converter = () =>
   let {type} = useParams();
 
   //units contains the units of the selected type (quantity), eg "length":
-  let units = require("./quantity-lists/" + type + ".json");
+  let units = require("../quantity-lists/" + type + ".json");
 
   // https://reactjs.org/docs/hooks-intro.html :
   // My understanding: unit1 is a variable, changed by the function setUnit1. 
@@ -59,7 +59,8 @@ const Converter = () =>
   }
 
 
-  // Swaps the upper and lower units and the numbers in the input and output boxes:
+  // Swaps the upper and lower units and the numbers in the input and output 
+  // boxes:
   const swap = () =>
   {
     let fromElement = document.getElementById("from-box");
@@ -84,8 +85,9 @@ const Converter = () =>
     let fromUnit = getUnitByName(unit1);
     let toUnit = getUnitByName(unit2);
 
-    // Checks so that the entered value in input is a value (e.g. doesn't contain any letters)
-    //  and isn't empty. Otherwise, the output box is set empty and the function doesn't continue.
+    // Checks so that the entered value in input is a value (e.g. doesn't 
+    // contain any letters) and isn't empty. Otherwise, the output box is 
+    // set empty and the function doesn't continue.
     if(isNaN(fromElement.value) || fromElement.value.length === 0)
     {
       toElement.innerHTML = "";
@@ -98,10 +100,12 @@ const Converter = () =>
       return;
     }
 
-    //checks whether the upper unit (fromUnit) has a prefix to a "main" unit (e.g. CENTImeter):
+    //checks whether the upper unit (fromUnit) has a prefix to a "main" 
+    // unit (e.g. CENTImeter):
     if(fromUnit.siPrefix != null) 
     {
-      //the prefix is found in si_prefixes, by the prefix's name matching fromUnit.siPrefix,
+      //the prefix is found in si_prefixes, by the prefix's name matching 
+      // fromUnit.siPrefix,
       // and stored in foundPrefix:
       let foundPrefix = si_prefixes.find(prefix => prefix.name === fromUnit.siPrefix);
 
@@ -109,11 +113,20 @@ const Converter = () =>
       convConst *= foundPrefix.value;
 
       /* 
-      If area is converted and e.g. the fromUnit has an SI prefix, e.g. mm^2, the SI prefix being m (milli), then for it to be converted to m^2, multiplying it by the value once isn't 
-      enough, because it is now two dimensions. Therefore, it's multiplied by the value again (two times in total).
-      One might expect the same thing to be done in the case of type === "volume", e.g. the fromUnit being milli-liters, which needs to first be converted to liters, that it would be 
-      multiplied by the value three times (because volume is three dimensions), but, unlike the case in two dimensions (where 1000 * 1000 sq. millimeters fit in one sq. meter), 1000 
-      milliliters fit in one liter. If there were for example cubic millimeters, then that would have had to be multiplied by 1000 * 1000 * 1000 to get cubic meters.
+      If area is converted and e.g. the fromUnit has an SI prefix, e.g. mm^2, 
+      the SI prefix being m (milli), then for it to be converted to m^2, 
+      multiplying it by the value once isn't 
+      enough, because it is now two dimensions. Therefore, it's multiplied by 
+      the value again (two times in total).
+      One might expect the same thing to be done in the case of 
+      type === "volume", 
+      e.g. the fromUnit being milli-liters, which needs to first be converted 
+      to liters, that it would be 
+      multiplied by the value three times (because volume is three dimensions), 
+      but, unlike the case in two dimensions (where 1000 * 1000 sq. millimeters 
+      fit in one sq. meter), 1000 milliliters fit in one liter. If there were 
+      for example cubic millimeters, then that would have had to be multiplied 
+      by 1000 * 1000 * 1000 to get cubic meters.
       */
       if(type === "area")
         convConst *= foundPrefix.value;
@@ -134,10 +147,10 @@ const Converter = () =>
       toUnit = getUnitByName(toUnit.belongsTo);
     }
 
-    //checks if the upper and lower units are the same (might also have changed through 
-    // the code above). This check is done because otherwise the statement at "else if" 
-    // would be run, because fromUnit.conversions is empty if it's a "main" unit 
-    // (without prefix), see units.JSON.
+    //checks if the upper and lower units are the same (might also have changed 
+    //through the code above). This check is done because otherwise the 
+    // statement at "else if" would be run, because fromUnit.conversions is 
+    // empty if it's a "main" unit (without prefix), see units.JSON.
     if(fromUnit.name === toUnit.name)
     {
       //do nothing
@@ -154,7 +167,8 @@ const Converter = () =>
       convConst = convConst * fromUnit.conversions[toUnit.name];
     }
 
-    //update the output box to the converted value (input multiplied by conversion constant):
+    //update the output box to the converted value (input multiplied by 
+    // conversion constant):
     toElement.innerHTML = Number(fromElement.value) * convConst;
   }
 
@@ -163,16 +177,16 @@ const Converter = () =>
   const convertTemperature = (fromElement, toElement, fromUnit, toUnit) =>
   {
     //Temperature conversion is a special case. It can be compared to an equation
-    // y = Ax + B, where y is the unit that's converted to, x is the original unit,
-    // A is the constant and B is the startValue, see below:
+    // y = Ax + B, where y is the unit that's converted to, x is the original
+    // unit, A is the constant and B is the startValue, see below:
     let constant = 1;
     let startValue = 0;
 
     //See temperature.json. E.g. if fromUnit is celcius: 
-    // fromUnit.conversions["farenheit"] is not a number, but an object with two
-    // numbers, a constant and a startValue. On the other hand, if fromUnit is
-    // celcius then fromUnit.conversions["kelvin"] is a number, which is only 
-    // the startValue (else below):
+    //fromUnit.conversions["farenheit"] is not a number, but an object with two
+    //numbers, a constant and a startValue. On the other hand, if fromUnit is
+    //celcius then fromUnit.conversions["kelvin"] is a number, which is only 
+    //the startValue (else below):
     if(typeof(fromUnit.conversions[toUnit.name]) != "number")
     {
       constant = fromUnit.conversions[toUnit.name].constant;

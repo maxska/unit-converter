@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //======================    Files    ========================//
 import './App.css';
 //=====================    Components    ====================//
-import QuantityListElement from "./QuantityListElement.js";
-import Converter from "./Converter.js";
+import QuantityListElement from "./components/QuantityListElement.js";
+import Converter from "./components/Converter.js";
 //===========================================================//
 
 
@@ -40,10 +40,7 @@ const Startpage = () =>
 //  and it can be used inside that component.
 const App = () =>
 {
-  // https://reacttraining.com/react-router/web/guides/quick-start
-
   return(
-
     <Router>
         <Switch>
 
@@ -55,7 +52,6 @@ const App = () =>
 
         </Switch>
     </Router>
-
   );
 }
 export default App;
