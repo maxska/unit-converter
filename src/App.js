@@ -30,6 +30,7 @@ const Startpage = () =>
         <QuantityListElement quantity="temperature"/>
         <QuantityListElement quantity="area"/>
         <QuantityListElement quantity="volume"/>
+        <QuantityListElement quantity="velocity"/>
       </div>
 
     </div>

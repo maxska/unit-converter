@@ -1,0 +1,67 @@
+[
+  {
+		"name": "kilometers/h",
+		"shortName": "km/h",
+		"conversions": 
+		{
+      "meters/s": 0.277777778,
+      "miles/h": 0.621371192,
+      "feet/s": 0.911344415,
+      "knots": 0.539956803
+		}
+  },
+  {
+		"name": "meters/s",
+		"shortName": "m/s",
+		"conversions": 
+		{
+      "kilometers/h": 3.6,
+      "miles/h": 2.23693629,
+      "feet/s": 3.2808399,
+      "knots": 1.94384449
+		}
+  },
+  {
+		"name": "kilometers/s",
+		"shortName": "km/s",
+		"siPrefix": "kilo",
+		"belongsTo": "meters/s"
+  },
+
+
+  {
+		"name": "miles/h",
+		"shortName": "mph",
+		"conversions": 
+		{
+      "kilometers/h": 1.609344,
+      "meters/s": 0.44704,
+      "feet/s": 1.46666667,
+      "knots": 0.868976242
+		}
+  },
+  {
+		"name": "feet/s",
+		"shortName": "ft/s",
+		"conversions": 
+		{
+      "kilometers/h": 1.09728,
+      "meters/s": 0.3048,
+      "miles/h": 0.681818182,
+      "knots": 0.592483801
+		}
+  },
+
+
+  {
+		"name": "knots",
+		"shortName": "knots",
+		"conversions": 
+		{
+      "kilometers/h": 1.85200,
+      "meters/s": 0.514444444,
+      "miles/h": 1.15077945,
+      "feet/s": 1.68780986
+		}
+  }
+]
