@@ -20,10 +20,6 @@ const Startpage = () =>
         <p style={{fontSize: "60px"}}>Unit Converter</p>
       </div>
 
-      <p style={{color: "orange", margin: "10px"}}>
-        This app looks best on windows less than 600px width
-      </p>
-
       <div className="lower">
         <QuantityListElement quantity="length"/>
         <QuantityListElement quantity="weight"/>

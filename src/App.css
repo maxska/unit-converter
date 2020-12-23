@@ -67,3 +67,12 @@ body
 /*===============================================================*/
 
 
+@media screen and (min-width: 600px)
+{
+  .lower::before
+  {
+    content: "This app looks best on windows that are less than 600px width";
+    color: orange;
+    margin: 20px;
+  }
+}
