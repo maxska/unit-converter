@@ -26,20 +26,11 @@ body
 {
     font-size: 50px;
     color: white;
-
     margin: 0;
     padding: 0;
-
-    margin-left: 1vw;
-
-
-
-    
+    margin-left: 1vw;    
     position: absolute;
-
-    margin-bottom: 10px;
-
-    
+    margin-bottom: 10px;    
 }
 
 #header span
@@ -164,7 +155,6 @@ body
 {
     .unit-selector-box
     {
-        background-color: red;
         padding: 0;
         margin: 0;
         display: inline;
